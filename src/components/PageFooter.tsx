@@ -1,3 +1,3 @@
 export default function PageFooter() {
-  return <></>;
+  return <>Copyright © 2026 Tad Decker</>;
 }
