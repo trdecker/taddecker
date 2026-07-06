@@ -1,7 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { defineBackend } from "@aws-amplify/backend";
-import { auth } from "./auth/resource";
-import { data } from "./data/resource";
+import { auth } from "./auth/resource.ts";
+import { data } from "./data/resource.ts";
 
 defineBackend({
   auth,
