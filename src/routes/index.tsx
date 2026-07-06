@@ -1,13 +1,12 @@
-import { Route, Routes } from 'react-router-dom';
-import PageLayout from '../components/Layout';
-import HomePage from '../pages/Home';
-import ContactPage from '../pages/Contact';
-import AboutPage from '../pages/About';
-import NotFoundPage from '../pages/NotFound';
-import { ROUTES } from './paths';
+import { Route, Routes } from "react-router-dom";
+import PageLayout from "../components/Layout";
+import HomePage from "../pages/Home";
+import ContactPage from "../pages/Contact";
+import AboutPage from "../pages/About";
+import NotFoundPage from "../pages/NotFound";
+import { ROUTES } from "./paths";
 
 function AppRoutes() {
-
   return (
     <Routes>
       <Route element={<PageLayout />}>

@@ -43,7 +43,6 @@ export default defineConfig([
       // Error handling rules to match CLAUDE.md specifications
       "no-empty": ["error", { allowEmptyCatch: false }], // Disallow empty catch blocks
       "@typescript-eslint/only-throw-error": "error", // Only allow throwing Error instances
-      "@typescript-eslint/use-unknown-in-catch-variables": "error", // Enforce catch variables are typed as unknown
       "@typescript-eslint/prefer-promise-reject-errors": "error", // Require Error instances when rejecting promises
     },
   },
@@ -67,7 +66,6 @@ export default defineConfig([
       // Error handling rules for backend
       "no-empty": ["error", { allowEmptyCatch: false }],
       "@typescript-eslint/only-throw-error": "error",
-      "@typescript-eslint/use-unknown-in-catch-variables": "error",
       "@typescript-eslint/prefer-promise-reject-errors": "error",
     },
   },
