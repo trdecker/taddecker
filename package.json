@@ -54,7 +54,12 @@
     "url": "https://github.com/trdecker/taddecker/issues"
   },
   "overrides": {
-    "esbuild": "$esbuild"
+    "esbuild": "$esbuild",
+    "rolldown": {
+      "optionalDependencies": {
+        "@rolldown/binding-linux-x64-gnu": "*"
+      }
+    }
   },
   "homepage": "https://github.com/trdecker/taddecker#readme"
 }
