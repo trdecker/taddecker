@@ -35,6 +35,3 @@ amplifyconfiguration*
 
 # Environemnt variables
 .env
-
-# IDE files
-.vscode
