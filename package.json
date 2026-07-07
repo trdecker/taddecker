@@ -29,12 +29,10 @@
     "autoprefixer": "^10.5.2",
     "aws-cdk-lib": "^2.261.0",
     "constructs": "^10.6.0",
-    "esbuild": "^0.28.1",
     "eslint": "^10.6.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
-    "oxlint": "^1.71.0",
     "postcss": "^8.5.16",
     "tailwindcss": "^4.3.2",
     "tsx": "^4.23.0",
@@ -43,7 +41,6 @@
     "vite": "^8.1.1"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "eslint.config.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trdecker/taddecker.git"
@@ -54,7 +51,6 @@
     "url": "https://github.com/trdecker/taddecker/issues"
   },
   "overrides": {
-    "esbuild": "$esbuild",
     "rolldown": {
       "optionalDependencies": {
         "@rolldown/binding-linux-x64-gnu": "*"
