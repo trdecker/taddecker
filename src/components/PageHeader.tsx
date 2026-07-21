@@ -9,9 +9,12 @@ export default function PageHeader() {
         TadDecker
       </h1>
       <div className="flex flex-row gap-4">
+        <a href="/resume.pdf" className="p-2" download="resume.pdf">
+          Resume
+        </a>
         <button onClick={() => navigate(ROUTES.ABOUT)}>About</button>
-        <button onClick={() => navigate(ROUTES.BLOG)}>Blog</button>
         <button onClick={() => navigate(ROUTES.CONTACT)}>Contact</button>
+        <button onClick={() => navigate(ROUTES.BLOG)}>Blog</button>
       </div>
     </div>
   );

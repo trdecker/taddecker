@@ -22,8 +22,7 @@ export default function AboutPage() {
       <h1>Other Stuff</h1>
 
       <div className="flex flex-col">
-        {/* TODO: Download resume */}
-        <span>My Resume</span>
+        <a href="/resume.pdf" download="resume.pdf">My Resume</a>
         <Link to={ROUTES.CONTACT}>Contact Me</Link>
         <Link to={ROUTES.ABOUT_SITE} className="hover:underline">How I made this website</Link>
         <Link to={ROUTES.BLOG}>I write! Check it out</Link>
