@@ -5,6 +5,7 @@ import ContactPage from "../pages/Contact";
 import AboutPage from "../pages/About";
 import NotFoundPage from "../pages/NotFound";
 import { ROUTES } from "../../shared/routes";
+import BlogPage from "../pages/Blog";
 
 function AppRoutes() {
   return (
@@ -12,6 +13,7 @@ function AppRoutes() {
       <Route element={<PageLayout />}>
         <Route path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.ABOUT} element={<AboutPage />} />
+        <Route path={ROUTES.BLOG} element={<BlogPage />} />
         <Route path={ROUTES.CONTACT} element={<ContactPage />} />
 
         {/* 404 page */}

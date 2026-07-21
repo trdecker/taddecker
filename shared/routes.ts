@@ -1,6 +1,8 @@
 export const ROUTES = {
   HOME: '/',
   ABOUT: '/about',
+  ABOUT_SITE: '/about/site',
+  BLOG: '/blog',
   CONTACT: '/contact',
 } as const;
 
