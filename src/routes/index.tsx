@@ -4,7 +4,7 @@ import HomePage from "../pages/Home";
 import ContactPage from "../pages/Contact";
 import AboutPage from "../pages/About";
 import NotFoundPage from "../pages/NotFound";
-import { ROUTES } from "./paths";
+import { ROUTES } from "../../shared/routes";
 
 function AppRoutes() {
   return (

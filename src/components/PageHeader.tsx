@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../shared/routes";
 
 export default function PageHeader() {
   const navigate = useNavigate();
@@ -8,8 +9,8 @@ export default function PageHeader() {
         TadDecker
       </h1>
       <div className="flex flex-row gap-4">
-        <button onClick={() => navigate("/about")}>About</button>
-        <button onClick={() => navigate("/contact")}>Contact</button>
+        <button onClick={() => navigate(ROUTES.ABOUT)}>About</button>
+        <button onClick={() => navigate(ROUTES.CONTACT)}>Contact</button>
       </div>
     </div>
   );
