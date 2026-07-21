@@ -13,7 +13,7 @@ export default function AboutPage() {
         <span>• Family Man</span>
       </div>
       <div>
-        <img className="border-2 rounded-xl" src="../../public/images/me_with_bird.jpg" />
+        <img className="border-2 rounded-xl" src="/images/me_with_bird.jpg" />
         <i>An unflattering image of me with a peacock</i>
       </div>
     </div>
