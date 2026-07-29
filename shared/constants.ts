@@ -1,0 +1,1 @@
+export const BLOG_POST_STATUSES = ['draft', 'published', 'archived'] as const;
