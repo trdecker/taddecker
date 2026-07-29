@@ -1,5 +1,5 @@
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
-import { BLOG_POST_STATUSES } from "../../shared/constants";
+import { BLOG_POST_STATUSES } from "../../shared/constants.js";
 
 const schema = a.schema({
   BlogPost: a
