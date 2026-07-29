@@ -10,9 +10,9 @@ export default function PageHeader() {
       </h1>
       <div className="flex flex-row gap-4">
         <button onClick={() => navigate(ROUTES.ABOUT)}>About</button>
+        <button onClick={() => navigate(ROUTES.BLOG)}>Blog</button>
         <button onClick={() => navigate(ROUTES.RESUME)}>Resume</button>
         <button onClick={() => navigate(ROUTES.CONTACT)}>Contact</button>
-        {/* <button onClick={() => navigate(ROUTES.BLOG)}>Blog</button> */}
       </div>
     </div>
   );

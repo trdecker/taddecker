@@ -7,6 +7,7 @@ import NotFoundPage from "../pages/NotFound";
 import { ROUTES } from "../../shared/routes";
 import BlogPage from "../pages/Blog";
 import ResumePage from "../pages/Resume";
+import BlogPostPage from "../pages/BlogPost";
 
 function AppRoutes() {
   return (
@@ -15,7 +16,10 @@ function AppRoutes() {
         <Route path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.ABOUT} element={<AboutPage />} />
         <Route path={ROUTES.RESUME} element={<ResumePage />} />
-        <Route path={ROUTES.BLOG} element={<BlogPage />} />
+        <Route path={ROUTES.BLOG}>
+          <Route index element={<BlogPage />} />
+          <Route path={ROUTES.BLOG_POST} element={<BlogPostPage />} />
+        </Route>
         <Route path={ROUTES.CONTACT} element={<ContactPage />} />
 
         {/* 404 page */}

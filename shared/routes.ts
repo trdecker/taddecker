@@ -3,6 +3,7 @@ export const ROUTES = {
   ABOUT: '/about',
   ABOUT_SITE: '/about/site',
   BLOG: '/blog',
+  BLOG_POST: '/blog/:id',
   CONTACT: '/contact',
   RESUME: '/resume',
 } as const;
