@@ -3,8 +3,16 @@ import { client } from './client';
 
 // ##### GET ##### //
 
-export async function getBlogPosts(): Promise<BlogPost[]> {
-  const { data, errors } = await client.models.BlogPost.list({ authMode: 'apiKey'});
+export async function getPublishedBlogPosts(): Promise<BlogPost[]> {
+  const { data, errors } = await client.models.BlogPost.listBlogPostByStatusAndPublishedAt(
+    {
+      status: 'published'
+    },
+    {
+      sortDirection: 'DESC',
+      authMode: 'apiKey'
+    }
+  );
 
   if (errors) {
     throw new Error("Error loading blog posts");

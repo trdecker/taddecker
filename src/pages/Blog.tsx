@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { BlogPost } from "../../shared/types";
-import { getBlogPosts } from "../api/BlogPost";
+import { getPublishedBlogPosts } from "../api/BlogPost";
 import { Link } from "react-router-dom";
 import { formatDate } from "../utils";
 
@@ -10,7 +10,7 @@ export default function BlogPage() {
   useEffect(() => {
     async function loadMostRecent() {
       try {
-        const mostRecent = await getBlogPosts();
+        const mostRecent = await getPublishedBlogPosts();
         setBlogPosts(mostRecent);
       } catch (e) {
         console.error(e);
