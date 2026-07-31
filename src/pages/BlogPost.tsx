@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { getBlogPostFromSlug } from "../api/BlogPost";
 import type { BlogPost } from "../../shared/types";
 import { formatDate } from "../utils";
@@ -9,6 +9,7 @@ export default function BlogPostPage() {
   const { slug } = useParams();
   const [blogPost, setBlogPost] = useState<BlogPost>();
   const [loading, setLoading] = useState<boolean>(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function loadBlogPost(slug: string) {
@@ -36,6 +37,14 @@ export default function BlogPostPage() {
 
 
   return(<div className="m-12">
+    <div className="flex justify-start mb-4">
+      <button
+        onClick={() => navigate('/blog')}
+        style={{ backgroundColor: 'transparent' }}
+      >
+        Back
+      </button> 
+    </div>
     <p className="pb-4 text-lg">
       {blogPost.title ?? "NOT FOUND"}
     </p>
