@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { BlogPost } from "../../shared/types";
 import { getBlogPosts } from "../api/BlogPost";
 import { Link } from "react-router-dom";
+import { formatDate } from "../utils";
 
 export default function BlogPage() {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
@@ -18,10 +19,6 @@ export default function BlogPage() {
 
     loadMostRecent();
   }, []);
-
-  function formatDate(dateString: string) {
-    return (new Date(dateString)).toLocaleDateString();
-  }
 
   return (<div className="flex flex-col p-4 md:p-8 lg:p-12">
     <h1 className="pt-16">Blog</h1>
