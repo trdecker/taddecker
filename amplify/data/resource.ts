@@ -25,5 +25,8 @@ export const data = defineData({
   schema,
   authorizationModes: {
     defaultAuthorizationMode: "userPool",
+    apiKeyAuthorizationMode: {
+      expiresInDays: 30, // API keys expire — you'll need to rotate/redeploy before this date
+    },
   },
 });
