@@ -12,7 +12,10 @@ const schema = a.schema({
       publishedAt: a.datetime(),
       archivedAt: a.datetime(),
     })
-    .secondaryIndexes((index) => [index('slug')])
+    .secondaryIndexes((index) => [
+      index('slug'),
+      index('status').sortKeys(['publishedAt']),
+    ])
     .authorization((allow) => [
       allow.publicApiKey().to(['read']),
       allow.group('ADMIN'),
