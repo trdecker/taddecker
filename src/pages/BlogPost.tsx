@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { getBlogPostFromSlug } from "../api/BlogPost";
 import type { BlogPost } from "../../shared/types";
+import { formatDate } from "../utils";
 
 
 export default function BlogPostPage() {
@@ -31,8 +32,20 @@ export default function BlogPostPage() {
 
   if (!blogPost) return (<>Blog post not found</>);
 
-  return(<>
-    {blogPost.title ?? "NOT FOUND"}
-    <p>{blogPost.content}</p>
-  </>)
+  
+
+
+  return(<div className="m-12">
+    <p className="pb-4 text-lg">
+      {blogPost.title ?? "NOT FOUND"}
+    </p>
+    {blogPost.publishedAt && (
+      <p className="pb-4">
+        {formatDate(blogPost.publishedAt)}
+      </p>
+    )}
+    <p className="text-start">
+      {blogPost.content}
+    </p>
+  </div>)
 }
