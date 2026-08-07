@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ROUTES } from "../../shared/routes";
 import { useTheme } from "../hooks/useTheme";
+import { DarkModeToggle } from "./DarkModeToggle";
 
 export default function PageHeader() {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function PageHeader() {
       >
         <div
           onClick={() => navigate(ROUTES.HOME)}
-          className="hover:cursor-pointer flex items-center"
+          className="cursor-pointer flex items-center"
         >
           <img
             className={`w-auto object-contain transition-all duration-300 ease-in-out ${
@@ -41,9 +42,7 @@ export default function PageHeader() {
           <button onClick={() => navigate(ROUTES.BLOG)}>Blog</button>
           <button onClick={() => navigate(ROUTES.RESUME)}>Resume</button>
           <button onClick={() => navigate(ROUTES.CONTACT)}>Contact</button>
-          <button onClick={toggleTheme} aria-label="Toggle theme">
-            {theme === "dark" ? "☀️" : "🌙"}
-          </button>
+          <DarkModeToggle checked={theme === "dark"} onChange={toggleTheme} />
         </div>
       </div>
 
