@@ -36,6 +36,14 @@ export default function PageHeader() {
                 : "/logo/LogoName_Orange_Large.png"
             }
           />
+          <img
+            className="h-[4rem]"
+            src={
+              theme === "light"
+                ? "/logo/HelmetFull_Blue_Large.png"
+                : "/logo/HelmetFull_Orange_Large.png"
+            }
+          />
         </div>
         <div className="flex flex-row gap-4">
           <button onClick={() => navigate(ROUTES.ABOUT)}>About</button>
